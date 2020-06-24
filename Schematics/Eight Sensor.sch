@@ -1,0 +1,218 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6050 3400 6050 4050
+Wire Wire Line
+	6250 3400 6050 3400
+Wire Wire Line
+	6550 3400 6550 4050
+Wire Wire Line
+	6350 3400 6550 3400
+Wire Wire Line
+	6050 1750 6050 1300
+Wire Wire Line
+	6250 1750 6050 1750
+Wire Wire Line
+	6550 1750 6350 1750
+Wire Wire Line
+	6550 1300 6550 1750
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5EEFE54D
+P 6350 1300
+F 0 "M1" V 6055 1250 50  0000 C CNN
+F 1 "Motor_DC" V 6146 1250 50  0000 C CNN
+F 2 "" H 6350 1210 50  0001 C CNN
+F 3 "~" H 6350 1210 50  0001 C CNN
+	1    6350 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Motor:Motor_DC M2
+U 1 1 5EEFE9A7
+P 6350 4050
+F 0 "M2" V 6055 4000 50  0000 C CNN
+F 1 "Motor_DC" V 6146 4000 50  0000 C CNN
+F 2 "" H 6350 3960 50  0001 C CNN
+F 3 "~" H 6350 3960 50  0001 C CNN
+	1    6350 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L robotics:L298N P2
+U 1 1 5EEFD99F
+P 6150 2600
+F 0 "P2" V 6072 3178 60  0000 L CNN
+F 1 "L298N" V 6178 3178 60  0000 L CNN
+F 2 "" H 6150 2750 60  0001 C CNN
+F 3 "" H 6150 2750 60  0001 C CNN
+	1    6150 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 5EEFBDE7
+P 5400 800
+F 0 "J1" V 5411 988 50  0000 L CNN
+F 1 "Barrel_Jack" V 5502 988 50  0000 L CNN
+F 2 "" H 5450 760 50  0001 C CNN
+F 3 "~" H 5450 760 50  0001 C CNN
+	1    5400 800 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 3100 5200 2600
+Wire Wire Line
+	5200 2600 5600 2600
+Wire Wire Line
+	5600 3100 5300 3100
+Wire Wire Line
+	5300 3100 5300 3200
+Wire Wire Line
+	5300 3200 4800 3200
+Wire Wire Line
+	4800 3100 5200 3100
+Wire Wire Line
+	4800 3000 5600 3000
+Wire Wire Line
+	4800 2900 5600 2900
+Wire Wire Line
+	4800 2800 5600 2800
+Wire Wire Line
+	4800 2700 5600 2700
+$Comp
+L arduino:Arduino_Uno_Shield XA1
+U 1 1 5EEF8EC2
+P 3500 3250
+F 0 "XA1" H 3500 4637 60  0000 C CNN
+F 1 "Arduino_Uno_Shield" H 3500 4531 60  0000 C CNN
+F 2 "" H 5300 7000 60  0001 C CNN
+F 3 "" H 5300 7000 60  0001 C CNN
+	1    3500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5EF23BED
+P 5300 3750
+F 0 "D1" V 5339 3633 50  0000 R CNN
+F 1 "LED" V 5248 3633 50  0000 R CNN
+F 2 "" H 5300 3750 50  0001 C CNN
+F 3 "~" H 5300 3750 50  0001 C CNN
+	1    5300 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1300 3400 2200 3400
+Wire Wire Line
+	2200 3300 1300 3300
+Wire Wire Line
+	1300 3200 2200 3200
+Wire Wire Line
+	2200 3100 1300 3100
+Wire Wire Line
+	1300 3000 2200 3000
+Wire Wire Line
+	2200 2900 1300 2900
+Wire Wire Line
+	5500 1100 5500 2050
+Wire Wire Line
+	5500 2050 5600 2050
+Wire Wire Line
+	5300 1100 5300 1600
+Wire Wire Line
+	5300 2150 5600 2150
+Wire Wire Line
+	5600 2250 5200 2250
+Wire Wire Line
+	5200 2250 5200 1700
+Wire Wire Line
+	5200 1700 1900 1700
+Wire Wire Line
+	1900 4300 2200 4300
+Wire Wire Line
+	5300 1600 1800 1600
+Wire Wire Line
+	1800 3800 2200 3800
+Connection ~ 5300 1600
+Wire Wire Line
+	5300 1600 5300 2150
+Text Label 5500 1450 1    50   ~ 0
++12V
+Text Label 5300 1400 1    50   ~ 0
+GND
+Wire Wire Line
+	4800 3300 5300 3300
+Wire Wire Line
+	5300 3300 5300 3600
+Wire Wire Line
+	5300 3900 5300 4600
+Wire Wire Line
+	5300 4600 1800 4600
+Wire Wire Line
+	1800 4600 1800 3900
+Wire Wire Line
+	1800 3900 2200 3900
+Wire Wire Line
+	1300 2800 1700 2800
+Wire Wire Line
+	1700 2800 1700 1500
+Wire Wire Line
+	1700 1500 4950 1500
+Wire Wire Line
+	4950 1500 4950 2400
+Wire Wire Line
+	4950 2400 4800 2400
+Text Label 1900 2300 1    50   ~ 0
++5V
+Text Label 1800 2300 1    50   ~ 0
+GND
+$Comp
+L robotics:IR_SENSOR_8 P1
+U 1 1 5EEF9BC0
+P 800 3050
+F 0 "P1" H 667 2463 60  0000 C CNN
+F 1 "IR_SENSOR_8" H 667 2569 60  0000 C CNN
+F 2 "Robotics:IR_SENSOR_8" H 750 2600 60  0001 C CNN
+F 3 "" H 750 2600 60  0001 C CNN
+	1    800  3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 1700 1900 3650
+Wire Wire Line
+	1800 1600 1800 3800
+Wire Wire Line
+	1300 2700 1600 2700
+Wire Wire Line
+	1600 2700 1600 1400
+Wire Wire Line
+	1600 1400 5050 1400
+Wire Wire Line
+	5050 1400 5050 2500
+Wire Wire Line
+	5050 2500 4800 2500
+Wire Wire Line
+	800  3650 1900 3650
+Connection ~ 1900 3650
+Wire Wire Line
+	1900 3650 1900 4300
+Wire Wire Line
+	700  3650 700  3800
+Wire Wire Line
+	700  3800 1800 3800
+Connection ~ 1800 3800
+$EndSCHEMATC

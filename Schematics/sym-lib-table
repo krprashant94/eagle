@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name arduino)(type Legacy)(uri "E:/Software/KiCAD/KiCAD Modules/arduino.lib")(options "")(descr ""))
+  (lib (name robotics)(type Legacy)(uri "E:/Software/KiCAD/KiCAD Modules/robotics.lib")(options "")(descr ""))
+)

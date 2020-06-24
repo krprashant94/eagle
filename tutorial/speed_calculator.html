@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speed calculator</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Motor RPM</td>
+                <td>
+                    <input name="rpm" type="number" value="100" onchange="calculate(this.form)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Wheel Diameter (mm)</td>
+                <td>
+                    <input name="dia" type="number" value="40" onchange="calculate(this.form)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Power (%)</td>
+                <td>
+                    <input name="power" type="number" value="100" onchange="calculate(this.form)" min="0" max="100" />
+                </td>
+            </tr>
+            <tr>
+                <td>Actual Motor RPM</td>
+                <td><input name="a_rpm" type="number" readonly /></td>
+            </tr>
+            <tr>
+                <td>Speed (mm/sec)</td>
+                <td><input name="speed" type="number" readonly /></td>
+            </tr>
+            <tr>
+                <td>Speed (mm/milli-sec)</td>
+                <td><input name="speed_milli" type="number" readonly /></td>
+            </tr>
+            <tr>
+                <td>Recommended Sensor Refresh Rate (sec)</td>
+                <td><input name="rec_refresh" type="number" readonly /> or less</td>
+            </tr>
+            <tr>
+                <td>Max Sensor Refresh Rate (sec)</td>
+                <td><input name="refresh" type="number" readonly /></td>
+            </tr>
+        </table>
+        <br>
+        <b>delay() function may effect your refresh rate of sensor.</b>
+          <br /> 
+
+    </form>
+
+    <script type="text/javascript">
+        function calculate(frm) {
+            frm.a_rpm.value =  frm.rpm.value * frm.power.value * 0.01;
+            rps = (frm.a_rpm.value/60).toFixed(3);
+            frm.speed.value = (Math.PI *  frm.dia.value * rps).toFixed(3);
+            frm.speed_milli.value = ((Math.PI *  frm.dia.value * rps)/1000).toFixed(3);
+            frm.rec_refresh.value = (1/frm.speed.value*5).toFixed(3);
+            frm.refresh.value = (1/frm.speed.value*10).toFixed(3);
+        }
+        calculate(document.forms[0]);
+    </script>
+</body>
+</html>
